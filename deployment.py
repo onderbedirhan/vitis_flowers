@@ -29,7 +29,7 @@ inputData = [np.empty(inputDim, dtype=np.int8)]
 total_inference_duration_ms = 0
 num_images = 20
 
-for i in range(num_images):
+for i in range(1, num_images):
     IMG_PATH = os.path.join(IMAGES_FOLDER, f"{i}.jpg")
 
     # input image
