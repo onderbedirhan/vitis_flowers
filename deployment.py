@@ -32,8 +32,13 @@ num_images = len(image_filenames)  # Get the number of images dynamically
 total_inference_duration_ms = 0
 num_images = 20
 
+<<<<<<< HEAD
 for i, filename in enumerate(image_filenames):
     IMG_PATH = os.path.join(IMAGES_FOLDER, filename)
+=======
+for i in range(1, num_images):
+    IMG_PATH = os.path.join(IMAGES_FOLDER, f"{i}.jpg")
+>>>>>>> 2ee464bb965926afc51540c1392e14b710c61996
 
     # input image
     #image = cv2.imread(IMG_PATH, cv2.IMREAD_GRAYSCALE)
