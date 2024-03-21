@@ -15,7 +15,7 @@ DPU_CONFIG = sys.argv[1]
 
 # file path
 MODEL_PATH = f"./outputs/{DPU_CONFIG}/{DPU_CONFIG}.xmodel"
-IMAGES_FOLDER = "./sunflower.jpg"
+IMAGES_FOLDER = "./images/"
 
 all_process_start_time = time.time()
 
@@ -27,7 +27,7 @@ inputDim = tuple(runner.get_inputs()[0].get_tensor().dims)
 inputData = [np.empty(inputDim, dtype=np.int8)]
 
 total_inference_duration_ms = 0
-num_images = 10
+num_images = 1
 
 for i in range(num_images):
     IMG_PATH = os.path.join(IMAGES_FOLDER, f"{i}.jpg")
