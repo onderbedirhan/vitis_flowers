@@ -27,7 +27,7 @@ inputDim = tuple(runner.get_inputs()[0].get_tensor().dims)
 inputData = [np.empty(inputDim, dtype=np.int8)]
 
 total_inference_duration_ms = 0
-num_images = 1
+num_images = 20
 
 for i in range(num_images):
     IMG_PATH = os.path.join(IMAGES_FOLDER, f"{i}.jpg")
@@ -75,6 +75,7 @@ for i in range(num_images):
 average_inference_time_ms = total_inference_duration_ms / num_images
 
 print(f"Average inference duration: {average_inference_time_ms:.5f} ms")
+print(f"Total inference duration: {total_inference_duration_ms:.5f} ms")
 
 all_process_end_time = time.time()
 all_process_duration_ms = (all_process_end_time - all_process_start_time) * 1000
