@@ -5,7 +5,7 @@ OUTPUT_DIR="./enhanced_outputs/${DPU_CONFIG}/"
 
 
 vai_c_tensorflow2 \
-    --model      ./quantized_enhanced_model.h5 \
+    --model      ./quantized_complex_model_NEW.h5 \
     --arch       $ARCH_FILE \
     --output_dir $OUTPUT_DIR \
     --net_name   $DPU_CONFIG
